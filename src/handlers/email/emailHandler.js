@@ -1,15 +1,15 @@
 const { createTransport } = require('nodemailer');
 const { google } = require('googleapis');
+
 const userModel = require('../../models/user');
 
 // TODO: Move to .env
 const USER_EMAIL = `team02.el7a2ni@gmail.com`
 const USER_PASS = `el7a2ni!`
-const CLIENT_ID = "647728874059-erljj4g1cucpv2bcl1215m192leu4u8j.apps.googleusercontent.com";
-const CLIENT_SECRET = "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"
-const REFRESH_TOKEN = "1//04Crn4SBgXtgSCgYIARAAGAQSNwF-L9Irnj4JV9IdBxOBsFTZcE-4qYUG3c3CNz8ccSkkXyAj63ASlU_kGmW9HAA0SpW0TDGBEXE";
-const ACCESS_TOKEN = "ya29.a0AfB_byCOz91VlnrxL3PScaTgRB4zhzKcdQxvmwhav2VN8ONHwZ8TJXKaa7J1DbGh7SnIVmuQckLYvc1YO9zYUuPd4Bjfd4LmpyId9yaEy_QRFZicA3XGuYD5D_xwokoX2Dh6ZY0gTCKK6_NwT6Ok8d-TuK3MMsJD_3WqaCgYKAZkSARESFQHGX2MijQlGMSWUPsvnotkZuO-1ag0171";
-
+const CLIENT_ID = process.env.CLIENT_ID
+const CLIENT_SECRET = process.env.CLIENT_SECRET
+const REFRESH_TOKEN = process.env.REFRESH_TOKEN
+const ACCESS_TOKEN = process.env.ACCESS_TOKEN
 
 const sendMail = async (userId, notificationObject) => {
     return new Promise(async (resolve, reject) => {
