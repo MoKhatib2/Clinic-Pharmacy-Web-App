@@ -1,0 +1,11 @@
+body {
+  /* margin: 10px; */
+  height: 100vh;
+  background-color: #e5e5e5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: #e5e5e5;
+}
